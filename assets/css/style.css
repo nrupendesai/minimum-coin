@@ -1,0 +1,11 @@
+.left{
+	display : inline;
+	float :left;
+}
+
+.move-down{
+	margin-top : 10px;
+}
+.error{
+	color : red !important;
+}
