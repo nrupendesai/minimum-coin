@@ -1,41 +1,40 @@
-<div>
-	<div ng-if="response.status" class="coin-div">
-		<div class="row">
-			<div class="col-md-offset-3 col-md-6 text-center">
-				<h4>Converting {{ pennies }} pennies into coins</h4>
-			</div>
+
+<div ng-if="response.status" class="coin-div">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6 text-center">
+			<h4>Converting {{ pennies }} pennies into coins</h4>
 		</div>
-
-		<div class="row">
-			<div class="col-md-offset-3 col-md-6">
-				<table class="table">
-					<thead>
-						<tr>
-							<th>Coin</th>
-							<th class="text-right">Ammount</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr ng-repeat="(key, result) in results">
-							<td>{{ key }}</td>
-							<td class="text-right">{{ result }}</td>
-						</tr>
-					</tbody>
-				</table>
-
-			</div>
-
-
-		</div>
-
 	</div>
-	<div ng-if="!response.status">
-		<div class="row">
-			<div class="col-md-offset-3 col-md-6">
-				<label class="error">{{ response.message }}</label>
-			</div>
+
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Coin</th>
+						<th class="text-right">Ammount</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="(key, result) in results">
+						<td>{{ key }}</td>
+						<td class="text-right">{{ result }}</td>
+					</tr>
+				</tbody>
+			</table>
+
 		</div>
+
 
 	</div>
 
 </div>
+<div ng-if="!response.status">
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6">
+			<label class="error">{{ response.message }}</label>
+		</div>
+	</div>
+
+</div>
+
